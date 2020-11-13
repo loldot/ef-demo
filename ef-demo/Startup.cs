@@ -30,6 +30,7 @@ namespace ef_demo
             services.AddDbContext<GameReviewContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("GameReviewContext"));
+                options.LogTo(Console.WriteLine, LogLevel.Trace);
             });
         }
 

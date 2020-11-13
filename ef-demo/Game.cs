@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ef_demo
 {
@@ -8,6 +9,8 @@ namespace ef_demo
         public string Description { get; set; }
 
         public List<Review> Reviews { get; set; }
-        public string Name { get; internal set; }
+        public string Name { get; set; }
+
+        public Guid Etag { get; set; }
     }
 }
